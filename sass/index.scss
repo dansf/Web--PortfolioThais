@@ -1,0 +1,184 @@
+@use "import" as *;
+
+//* NavBar *//
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  z-index: $z-fixed;
+  background-color: $white-color;
+  @include flex(center, center);
+  //? Colocar o background transparente
+
+  .nav {
+    height: 100%;
+    @include flex(center, space-between);
+
+    &__logo {
+      @include font($h2-font-size, $font-semi-bold);
+      //TODO: Aumentar o tamanho da logo
+    }
+
+    &__container {
+      position: relative;
+
+      @media (max-width: rem(767)) {
+        position: fixed;
+        top: 0;
+        right: -80%;
+        // right: 0;
+        width: 70%;
+        height: 100vh;
+        z-index: $z-fixed;
+        //TODO: Mudar a cor de fundo para transparente
+        background-color: $white-color;
+        box-shadow: -1px 0px 5px 0px #ffd9c0b2;
+        @include transition;
+      }
+    }
+
+    &__ul {
+      @include flex(flex-start, center, column);
+      row-gap: $mb-2;
+      padding: $mb-4 0 0 $mb-2;
+
+      @media (min-width: rem(768)) {
+        align-items: center;
+        flex-direction: row;
+        column-gap: $mb-1-25;
+        padding: 0;
+      }
+    }
+
+    &__item {
+      @include font($normal-font-size, $font-medium);
+    }
+
+    &__link {
+      position: relative;
+      @include transition;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -3.5px;
+        left: 0;
+        background-color: $darkRed-color;
+        width: 100%;
+        height: 3px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform;
+        @include transition;
+        border-radius: $mb-1;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.toggle,
+.close {
+  @media (min-width: rem(768)) {
+    display: none;
+  }
+}
+
+.toggle {
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  @include font($h3-font-size, $font-regular);
+}
+
+//* Body *//
+.main {
+}
+
+.home {
+  &__container {
+    .one {
+      position: relative;
+      @include grid(0);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      .blob3 {
+        z-index: -1;
+        position: fixed;
+        width: rem(700);
+        top: -90px;
+        left: -50px;
+      }
+
+      .img1,
+      .img2 {
+        //? Tentar colocar as duas imagens no centro
+        width: 60vw;
+        height: 60vw;
+        background-color: rgb(236, 236, 236);
+        border: 1px solid $black-color;
+      }
+
+      .img1 {
+        border-radius: 20px 0 20px 20px;
+        grid-column: 1/span 2;
+        grid-row: 1;
+        justify-self: center;
+        align-self: center;
+        margin-left: $mb-4;
+      }
+
+      .img2 {
+        border-radius: 0 20px 20px 20px;
+        grid-column: 1/span 2;
+        grid-row: 1/span 2;
+        justify-self: center;
+        align-self: center;
+        margin: $mb-5 $mb-4 0 0;
+      }
+    }
+
+    .two {
+      @include grid($mb-1-25);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr, 1fr, auto;
+
+      h1{
+        @include font($h1-font-size, $font-semi-bold);
+        grid-column: 1/span 2;
+        grid-row: 1;
+      }
+
+      p{
+        @include font;
+        grid-column: 1/span 2;
+        grid-row: 2;
+      }
+
+      button{
+        grid-column: 1/span 2;
+        grid-row: 3;
+        justify-self: flex-end;
+        border-radius: 0 20px 0 20px;
+        background-color: $darkRed-color;
+        color: $white-color;
+        @include font($h2-font-size, $font-semi-bold);
+        padding: $mb-0-75 $mb-3-5;
+        @include transition;
+
+        &:hover{
+          background-color: $red-color;
+        }
+      }
+    }
+  }
+}
