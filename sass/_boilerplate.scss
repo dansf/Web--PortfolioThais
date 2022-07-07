@@ -81,3 +81,8 @@ a {
 .section-title {
   margin-bottom: $mb-2-5;
 }
+
+.show-menu{
+  right: 0 !important;
+  @include transition;
+}
