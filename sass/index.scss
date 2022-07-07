@@ -8,9 +8,9 @@
   width: 100%;
   height: $header-height;
   z-index: $z-fixed;
-  background-color: $white-color;
+  background: transparent;
+  backdrop-filter: blur(4px);
   @include flex(center, center);
-  //? Colocar o background transparente
 
   .nav {
     height: 100%;
@@ -32,7 +32,6 @@
         width: 70%;
         height: 100vh;
         z-index: $z-fixed;
-        //TODO: Mudar a cor de fundo para transparente
         background-color: $white-color;
         box-shadow: -1px 0px 5px 0px #ffd9c0b2;
         @include transition;
@@ -162,7 +161,6 @@
 
       .img1,
       .img2 {
-        //? Tentar colocar as duas imagens no centro
         width: 60vw;
         height: 60vw;
         background-color: rgb(236, 236, 236);
