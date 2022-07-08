@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -88,6 +87,16 @@ a {
   font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 1.5px;
+  transition: ease-in-out 0.3s;
+}
+
+.colorOrange {
+  background-color: #ffd9c0 !important;
+  transition: ease-in-out 0.3s;
+}
+
+.colorGray {
+  background-color: rgb(190, 190, 190) !important;
   transition: ease-in-out 0.3s;
 }
 
@@ -406,6 +415,7 @@ a {
 }
 
 .psicopedagogia__container {
+  position: relative;
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
@@ -416,11 +426,24 @@ a {
   font-size: 2rem;
   font-weight: 600;
 }
+.psicopedagogia__container img {
+  position: absolute;
+  z-index: -1;
+  width: 15.625rem;
+}
+.psicopedagogia__container img:nth-child(2) {
+  top: 40px;
+  right: 80px;
+}
+.psicopedagogia__container img:nth-child(3) {
+  top: 30px;
+  right: 0px;
+}
 .psicopedagogia__container .one {
   display: grid;
   gap: 0.5rem;
   width: 100%;
-  height: 21.875rem;
+  height: 18.75rem;
   justify-self: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -469,42 +492,180 @@ a {
   padding: 0.75rem 2.5rem;
 }
 
-.psicoeducação__container {
+.psicoeducacao__container {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
+  position: relative;
 }
-.psicoeducação__container h1 {
+.psicoeducacao__container h1 {
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
   font-weight: 600;
 }
-.psicoeducação__container .one {
-  width: 15.625rem;
-  height: 15.625rem;
-  background-color: rgb(202, 202, 202);
-  justify-self: center;
-  border: 1px solid #000;
-  border-radius: 0 50px 0 50px;
+.psicoeducacao__container img {
+  position: absolute;
+  z-index: -1;
+  top: 20px;
 }
-.psicoeducação__container .two p {
+.psicoeducacao__container .one {
+  width: 100%;
+  height: 18.75rem;
+  justify-self: center;
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.psicoeducacao__container .one .block:nth-child(1) {
+  height: 100%;
+  background-color: rgb(221, 221, 221);
+  border-radius: 0 20px 20px 0;
+}
+.psicoeducacao__container .one .block:nth-child(2) {
+  height: 100%;
+  background-color: rgb(221, 221, 221);
+  border-radius: 20px 0 0 20px;
+}
+.psicoeducacao__container .two p {
   font-family: "Poppins", sans-serif;
   font-size: 0.938rem;
   font-weight: 400;
   letter-spacing: 1.5px;
   align-self: center;
 }
-.psicoeducação__container .three {
+.psicoeducacao__container .three {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
 }
-.psicoeducação__container .three button {
+.psicoeducacao__container .three button {
   grid-column: 1/span 2;
   justify-self: flex-end;
   border-radius: 0 20px 20px 20px;
   padding: 0.75rem 2.5rem;
+}
+
+.about__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+}
+.about__container h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.about__container .one {
+  width: 15.625rem;
+  height: 15.625rem;
+  background-color: rgb(202, 202, 202);
+  justify-self: center;
+  border-radius: 20px 0 20px 20px;
+}
+.about__container .two h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem 0;
+}
+.about__container .two p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.938rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  align-self: center;
+}
+.about__container .three {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-self: center;
+  justify-content: center;
+}
+.about__container .three .toggleOne,
+.about__container .three .toggleTwo {
+  background-color: rgb(190, 190, 190);
+  border-radius: 50%;
+  height: 0.625rem;
+  width: 0.625rem;
+  cursor: pointer;
+}
+.about__container .three .toggleOne {
+  background-color: #ffd9c0;
+}
+
+.contato__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.contato__container h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.contato__container .one h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem 0;
+}
+.contato__container .one h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.contato__container .two .redes {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+  width: 100%;
+}
+.contato__container .two .redes a {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+.contato__container .two .redes a img {
+  width: 2.5rem;
+}
+
+.footer {
+  background-color: #ec9292;
+}
+.footer__container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.footer__container .one h1,
+.footer__container .one a,
+.footer__container .two h1,
+.footer__container .two a {
+  color: #fff;
+}
+.footer__container .one h1 {
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+}
+.footer__container .two ul {
+  display: grid;
+  gap: 1rem;
+}
+.footer__container .two ul a {
+  text-align: center;
+}
+.footer__container .two ul a li {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.938rem;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -94,3 +94,13 @@ a {
   letter-spacing: 1.5px;
   @include transition;
 }
+
+.colorOrange{
+  background-color: #ffd9c0 !important;
+  @include transition;
+}
+
+.colorGray{
+  background-color: rgb(190, 190, 190) !important;
+  @include transition;
+}
