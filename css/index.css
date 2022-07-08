@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -72,11 +73,21 @@ a {
 }
 
 .section-title {
-  margin-bottom: 2.5rem;
+  margin: 0.5rem 0 1rem 0;
 }
 
 .show-menu {
   right: 0 !important;
+  transition: ease-in-out 0.3s;
+}
+
+.button {
+  background-color: #ec9292;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
   transition: ease-in-out 0.3s;
 }
 
@@ -279,20 +290,14 @@ a {
   grid-column: 1/span 2;
   grid-row: 3;
   justify-self: flex-end;
+  padding: 0.75rem 2.5rem;
   border-radius: 0 20px 0 20px;
-  background-color: #EC9292;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  padding: 0.75rem 3.5rem;
-  transition: ease-in-out 0.3s;
 }
 .home__container .two button:hover {
-  background-color: #F4BFBF;
+  background-color: #f4bfbf;
 }
 
-.tree {
+.three__home {
   background-color: #faf0d7;
   width: 100%;
   margin-top: 4.5rem;
@@ -300,43 +305,44 @@ a {
   gap: 2rem;
   position: relative;
 }
-.tree .curly1,
-.tree .curly2,
-.tree .curly3 {
+.three__home .curly1,
+.three__home .curly2,
+.three__home .curly3 {
   width: 100px;
   height: 100px;
   position: absolute;
 }
-.tree .curly1 {
+.three__home .curly1 {
   top: 15rem;
   right: 1.5625rem;
 }
-.tree .curly2 {
+.three__home .curly2 {
   top: 26.25rem;
   left: 1.875rem;
 }
-.tree .curly3 {
+.three__home .curly3 {
   top: 37.5rem;
   right: 1.25rem;
   transform: rotate(7deg);
 }
-.tree .curly1, .tree .curly3 {
+.three__home .curly1,
+.three__home .curly3 {
   width: 110px;
   height: 110px;
 }
-.tree .crown {
+.three__home .crown {
   width: 40px;
   height: 40px;
   bottom: 0;
   left: 10.3125rem;
 }
-.tree .boxes {
+.three__home .boxes {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
   justify-items: center;
 }
-.tree .boxes .box {
+.three__home .boxes .box {
   border: 1px solid #000;
   height: 9.375rem;
   width: 10rem;
@@ -350,15 +356,155 @@ a {
   padding: 0.5rem 0;
   background-color: #fff;
 }
-.tree .boxes .box img {
+.three__home .boxes .box img {
   width: 4.375rem;
   height: 4.375rem;
 }
-.tree .boxes .box p {
+.three__home .boxes .box p {
   font-family: "Poppins", sans-serif;
   font-size: 0.938rem;
   font-weight: 500;
   text-align: center;
+}
+
+.psicanalise__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+}
+.psicanalise__container h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.psicanalise__container .one {
+  width: 15.625rem;
+  height: 15.625rem;
+  background-color: rgb(202, 202, 202);
+  justify-self: center;
+  border: 1px solid #000;
+  border-radius: 0 50px 0 50px;
+}
+.psicanalise__container .two p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.938rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  align-self: center;
+}
+.psicanalise__container .three {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.psicanalise__container .three button {
+  grid-column: 1/span 2;
+  justify-self: flex-end;
+  border-radius: 0 20px 20px 20px;
+  padding: 0.75rem 2.5rem;
+}
+
+.psicopedagogia__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+}
+.psicopedagogia__container h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.psicopedagogia__container .one {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+  height: 21.875rem;
+  justify-self: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.psicopedagogia__container .one .box:nth-child(1) {
+  grid-column: 1/3;
+  grid-row: 1/4;
+  border: 1px solid red;
+}
+.psicopedagogia__container .one .box:nth-child(2) {
+  grid-column: 3/4;
+  grid-row: 1;
+  border: 1px solid green;
+}
+.psicopedagogia__container .one .box:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 2;
+  border: 1px solid cyan;
+}
+.psicopedagogia__container .one .box:nth-child(4) {
+  grid-column: 3/4;
+  grid-row: 3/5;
+  border: 1px solid orange;
+}
+.psicopedagogia__container .one .box:nth-child(5) {
+  grid-column: 1/3;
+  grid-row: 4/5;
+  border: 1px solid blue;
+}
+.psicopedagogia__container .two p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.938rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  align-self: center;
+}
+.psicopedagogia__container .three {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.psicopedagogia__container .three button {
+  grid-column: 1/span 2;
+  justify-self: flex-end;
+  border-radius: 0 20px 20px 20px;
+  padding: 0.75rem 2.5rem;
+}
+
+.psicoeducação__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+}
+.psicoeducação__container h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.psicoeducação__container .one {
+  width: 15.625rem;
+  height: 15.625rem;
+  background-color: rgb(202, 202, 202);
+  justify-self: center;
+  border: 1px solid #000;
+  border-radius: 0 50px 0 50px;
+}
+.psicoeducação__container .two p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.938rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  align-self: center;
+}
+.psicoeducação__container .three {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.psicoeducação__container .three button {
+  grid-column: 1/span 2;
+  justify-self: flex-end;
+  border-radius: 0 20px 20px 20px;
+  padding: 0.75rem 2.5rem;
 }
 
 /*# sourceMappingURL=index.css.map */

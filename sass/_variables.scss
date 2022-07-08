@@ -2,11 +2,11 @@ $header-height: 3.5rem;
 $border: 1px solid red;
 
 // COLORS
-$red-color: #F4BFBF;
-$orange-color: #FFD9C0;
-$yellow-color: #FAF0D7;
-$second-color: #8CC0DE;
-$redDark-color: #EC9292;
+$red-color: #f4bfbf;
+$orange-color: #ffd9c0;
+$yellow-color: #faf0d7;
+$second-color: #8cc0de;
+$redDark-color: #ec9292;
 $yellowLight-color: #faf0d7;
 $black-color: #000;
 $white-color: #fff;
@@ -17,9 +17,9 @@ $biggest-font-size: 2.5rem;
 $h1-font-size: 1.5rem;
 $h2-font-size: 1.25rem;
 $h3-font-size: 1rem;
-$normal-font-size: .938rem;
-$small-font-size: .813rem;
-$smaller-font-size: .75rem;
+$normal-font-size: 0.938rem;
+$small-font-size: 0.813rem;
+$smaller-font-size: 0.75rem;
 
 // FONT WEIGHT
 $font-regular: 400;
@@ -34,9 +34,9 @@ $one-half-spacing: 1.5px;
 $two-spacing: 2px;
 
 // MARGENES BOTTOM
-$mb-0-25: .25rem;
-$mb-0-5: .5rem;
-$mb-0-75: .75rem;
+$mb-0-25: 0.25rem;
+$mb-0-5: 0.5rem;
+$mb-0-75: 0.75rem;
 $mb-1: 1rem;
 $mb-1-25: 1.25rem;
 $mb-1-5: 1.5rem;
@@ -54,16 +54,16 @@ $z-fixed: 100;
 
 // HOVER OVERLAY
 $ease-io: ease-in-out;
-$img-transition: .3s;
+$img-transition: 0.3s;
 $img-hidden: hidden;
 $img-scale: scale(1.1);
 
-@media screen and (min-width: rem(968)){
+@media (min-width: rem(968)) {
   $biggest-font-size: 3rem;
   $h1-font-size: 2.25rem;
   $h2-font-size: 1.5rem;
   $h3-font-size: 1.25rem;
   $normal-font-size: 1rem;
-  $small-font-size: .875rem;
-  $smaller-font-size: .813rem;
+  $small-font-size: 0.875rem;
+  $smaller-font-size: 0.813rem;
 }
