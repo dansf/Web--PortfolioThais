@@ -1,0 +1,214 @@
+@use "import" as *;
+
+//*================= Home ====================*//
+.main {
+}
+
+.home {
+  position: relative;
+  overflow: hidden;
+  padding-left: $mb-1-5;
+  margin-top: $header-height;
+  flex-direction: column;
+  // border: $border;
+
+  @media (min-width: rem(768)){
+    flex-direction: row;
+  }
+
+  .blob3 {
+    z-index: -1;
+    position: absolute;
+    width: rem(700);
+    top: -150px;
+    left: -70px;
+    // border: $border;
+  }
+
+  .redes {
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include flex;
+    flex-direction: column;
+    width: 30px;
+    height: 100%;
+    row-gap: $mb-2;
+    padding-left: 10px;
+    // border: $border;
+
+    .line {
+      background-color: $black-color;
+      height: rem(200);
+      width: 2px;
+      border-radius: 30px;
+    }
+
+    .social {
+      @include flex;
+      flex-direction: column;
+      row-gap: $mb-2;
+      width: rem(30);
+
+      a {
+        img {
+          // width: 10px;
+          // height: 10px
+        }
+      }
+    }
+  }
+
+  &__container {
+    @include grid($mb-1);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    // border: $border;
+
+    .one {
+      @include grid(0);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      .img1,
+      .img2 {
+        // width: clamp(rem(200), 55vw, rem(400));
+        //TODO: Tirar a altura quando receber as imagens
+        // height: rem(300);
+        // background-color: rgb(236, 236, 236);
+        // border: 1px solid $black-color;
+      }
+
+      .img1 {
+        // border-radius: 20px 0 20px 20px;
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        justify-self: center;
+        // align-self: center;
+        // margin: 0 0 0 $mb-4;
+        // border: $border;
+
+        img{
+          height: 100%;
+        }
+      }
+
+      .img2 {
+        border-radius: 0 20px 20px 20px;
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        justify-self: center;
+        // align-self: center;
+        margin: 10rem $mb-4 0 0;
+      }
+    }
+
+    .two {
+      @include grid($mb-1-5);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto 1fr;
+
+      h1 {
+        @include font($h1-font-size, $font-semi-bold);
+        grid-column: 1 / span 2;
+        grid-row: 1;
+      }
+
+      p {
+        @include font;
+        grid-column: 1 / span 2;
+        grid-row: 2;
+      }
+
+      button {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        justify-self: flex-end;
+        padding: $mb-0-75 $mb-2-5;
+        border-radius: 0 20px 0 20px;
+
+        &:hover {
+          background-color: $red-color;
+        }
+      }
+    }
+  }
+}
+
+.three__home {
+  background-color: $yellowLight-color;
+  width: 100%;
+  margin-top: $mb-4-5;
+  @include grid;
+  position: relative;
+
+  //! Consertar posição das setas e deixa-las responsivas
+  .curly1,
+  .curly2,
+  .curly3 {
+    //TODO: Colocar o tamnaho das setas responsivo
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+
+  .curly1 {
+    top: rem(240);
+    right: rem(25);
+  }
+
+  .curly2 {
+    top: rem(420);
+    left: rem(30);
+  }
+
+  .curly3 {
+    top: rem(600);
+    right: rem(20);
+    transform: rotate(7deg);
+  }
+
+  .curly1,
+  .curly3 {
+    width: 110px;
+    height: 110px;
+  }
+
+  .crown {
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    left: rem(165);
+  }
+
+  .boxes {
+    @include grid($mb-1);
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    .box {
+      //TODO: Mudar tamanho para ficar responsivo
+      border: 1px solid $black-color;
+      height: rem(150);
+      width: rem(160);
+      @include grid(0);
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 30%;
+      justify-items: center;
+      align-items: center;
+      border-radius: 20px;
+      padding: $mb-0-5 0;
+      background-color: $white-color;
+
+      img {
+        width: rem(70);
+        height: rem(70);
+      }
+
+      p {
+        @include font;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use "import" as *;
+
+//*================= Psicopedagogia ===================*//
+.psicopedagogia {
+  &__container {
+    position: relative;
+    @include grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+
+    h1 {
+      @include font(2rem, $font-semi-bold);
+    }
+
+    .one {
+      //TODO: Colocar o tamanho da imagem responsivo
+      justify-self: center;
+
+    }
+
+    .two {
+      p {
+        @include font($normal-font-size, $font-regular);
+        letter-spacing: 1.5px;
+        align-self: center;
+      }
+    }
+
+    .three {
+      // border: $border;
+      @include grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      button {
+        grid-column: 1 / span 2;
+        justify-self: flex-end;
+        border-radius: 0 20px 20px 20px;
+        padding: $mb-0-75 $mb-2-5;
+      }
+    }
+  }
+}

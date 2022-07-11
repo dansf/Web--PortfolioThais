@@ -205,25 +205,32 @@ a {
   position: relative;
   overflow: hidden;
   padding-left: 1.5rem;
+  margin-top: 3.5rem;
   flex-direction: column;
+}
+@media (min-width: 48rem) {
+  .home {
+    flex-direction: row;
+  }
 }
 .home .blob3 {
   z-index: -1;
   position: absolute;
   width: 43.75rem;
-  top: -90px;
+  top: -150px;
   left: -70px;
 }
 .home .redes {
   position: absolute;
   left: 0;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-direction: column;
   width: 30px;
-  height: 100vh;
+  height: 100%;
   row-gap: 2rem;
   padding-left: 10px;
 }
@@ -240,7 +247,7 @@ a {
   flex-direction: row;
   flex-direction: column;
   row-gap: 2rem;
-  width: 30px;
+  width: 1.875rem;
 }
 .home__container {
   display: grid;
@@ -254,19 +261,13 @@ a {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
-.home__container .one .img1,
-.home__container .one .img2 {
-  width: 60vw;
-  height: 60vw;
-  background-color: rgb(236, 236, 236);
-  border: 1px solid #000;
-}
 .home__container .one .img1 {
-  border-radius: 20px 0 20px 20px;
   grid-column: 1/span 2;
   grid-row: 1/span 2;
   justify-self: center;
-  margin: 0 0 0 4rem;
+}
+.home__container .one .img1 img {
+  height: 100%;
 }
 .home__container .one .img2 {
   border-radius: 0 20px 20px 20px;
@@ -388,12 +389,7 @@ a {
   font-weight: 600;
 }
 .psicanalise__container .one {
-  width: 15.625rem;
-  height: 15.625rem;
-  background-color: rgb(202, 202, 202);
   justify-self: center;
-  border: 1px solid #000;
-  border-radius: 0 50px 0 50px;
 }
 .psicanalise__container .two p {
   font-family: "Poppins", sans-serif;
@@ -426,52 +422,8 @@ a {
   font-size: 2rem;
   font-weight: 600;
 }
-.psicopedagogia__container img {
-  position: absolute;
-  z-index: -1;
-  width: 15.625rem;
-}
-.psicopedagogia__container img:nth-child(2) {
-  top: 40px;
-  right: 80px;
-}
-.psicopedagogia__container img:nth-child(3) {
-  top: 30px;
-  right: 0px;
-}
 .psicopedagogia__container .one {
-  display: grid;
-  gap: 0.5rem;
-  width: 100%;
-  height: 18.75rem;
   justify-self: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-}
-.psicopedagogia__container .one .box:nth-child(1) {
-  grid-column: 1/3;
-  grid-row: 1/4;
-  border: 1px solid red;
-}
-.psicopedagogia__container .one .box:nth-child(2) {
-  grid-column: 3/4;
-  grid-row: 1;
-  border: 1px solid green;
-}
-.psicopedagogia__container .one .box:nth-child(3) {
-  grid-column: 3/4;
-  grid-row: 2;
-  border: 1px solid cyan;
-}
-.psicopedagogia__container .one .box:nth-child(4) {
-  grid-column: 3/4;
-  grid-row: 3/5;
-  border: 1px solid orange;
-}
-.psicopedagogia__container .one .box:nth-child(5) {
-  grid-column: 1/3;
-  grid-row: 4/5;
-  border: 1px solid blue;
 }
 .psicopedagogia__container .two p {
   font-family: "Poppins", sans-serif;
@@ -504,29 +456,8 @@ a {
   font-size: 2rem;
   font-weight: 600;
 }
-.psicoeducacao__container img {
-  position: absolute;
-  z-index: -1;
-  top: 20px;
-}
 .psicoeducacao__container .one {
-  width: 100%;
-  height: 18.75rem;
-  justify-self: center;
-  position: relative;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
-}
-.psicoeducacao__container .one .block:nth-child(1) {
-  height: 100%;
-  background-color: rgb(221, 221, 221);
-  border-radius: 0 20px 20px 0;
-}
-.psicoeducacao__container .one .block:nth-child(2) {
-  height: 100%;
-  background-color: rgb(221, 221, 221);
-  border-radius: 20px 0 0 20px;
+  border: 1px solid #000;
 }
 .psicoeducacao__container .two p {
   font-family: "Poppins", sans-serif;
@@ -545,56 +476,6 @@ a {
   justify-self: flex-end;
   border-radius: 0 20px 20px 20px;
   padding: 0.75rem 2.5rem;
-}
-
-.about__container {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto auto;
-}
-.about__container h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-}
-.about__container .one {
-  width: 15.625rem;
-  height: 15.625rem;
-  background-color: rgb(202, 202, 202);
-  justify-self: center;
-  border-radius: 20px 0 20px 20px;
-}
-.about__container .two h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding: 1rem 0;
-}
-.about__container .two p {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.938rem;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  align-self: center;
-}
-.about__container .three {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
-  justify-self: center;
-  justify-content: center;
-}
-.about__container .three .toggleOne,
-.about__container .three .toggleTwo {
-  background-color: rgb(190, 190, 190);
-  border-radius: 50%;
-  height: 0.625rem;
-  width: 0.625rem;
-  cursor: pointer;
-}
-.about__container .three .toggleOne {
-  background-color: #ffd9c0;
 }
 
 .contato__container {

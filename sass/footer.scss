@@ -1,0 +1,43 @@
+@use "import" as *;
+
+//*================= FOOTER ===================*//
+.footer {
+  background-color: $redDark-color;
+
+  &__container {
+    @include grid($mb-1-5);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    // width: 100%;
+    // border: $border;
+
+    .one,
+    .two {
+      h1,
+      a {
+        color: $white-color;
+      }
+    }
+
+    .one {
+      h1 {
+        text-transform: uppercase;
+        border-bottom: 2px solid $white-color;
+      }
+    }
+
+    .two {
+      ul {
+        @include grid($mb-1);
+
+        a {
+          text-align: center;
+
+          li {
+            @include font($normal-font-size, $font-medium);
+          }
+        }
+      }
+    }
+  }
+}
