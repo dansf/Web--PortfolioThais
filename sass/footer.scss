@@ -11,6 +11,10 @@
     // width: 100%;
     // border: $border;
 
+    @media (min-width: rem(768)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .one,
     .two {
       h1,
@@ -23,6 +27,14 @@
       h1 {
         text-transform: uppercase;
         border-bottom: 2px solid $white-color;
+
+        @media (min-width: rem(768)){
+          text-align: end;
+          border-right: 2px solid $white-color;
+          border-bottom: none;
+          height: 100%;
+          padding-right: $mb-1;
+        }
       }
     }
 
@@ -32,6 +44,10 @@
 
         a {
           text-align: center;
+
+          @media (min-width: rem(768)){
+            text-align: start;
+          }
 
           li {
             @include font($normal-font-size, $font-medium);

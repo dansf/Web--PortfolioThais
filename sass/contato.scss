@@ -12,6 +12,8 @@
     }
 
     .one {
+
+      
       h1 {
         @include font($h1-font-size, $font-semi-bold);
         padding: $mb-1 0;

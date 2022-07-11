@@ -5,16 +5,27 @@
   &__container {
     @include grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
     position: relative;
+
+    @media (min-width: rem(768)){
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     h1 {
       @include font(2rem, $font-semi-bold);
+      align-self: flex-end;
     }
 
     .one {
-      //TODO: Colocar o tamanho da imagem responsivo
-      border: 1px solid $black-color;
+
+      @media (min-width: rem(768)) {
+        grid-column: 2;
+        grid-row: 1 / span 3;
+        align-self: center;
+        max-width: rem(450);
+      }
 
     }
 
@@ -34,8 +45,14 @@
       button {
         grid-column: 1 / span 2;
         justify-self: flex-end;
-        border-radius: 0 20px 20px 20px;
+        align-self: flex-start;
+        border-radius: 20px 0 20px 20px;
         padding: $mb-0-75 $mb-2-5;
+
+        @media (min-width: rem(768)){
+          justify-self: flex-start;
+          border-radius: 0 20px 20px 20px;
+        }
       }
     }
   }

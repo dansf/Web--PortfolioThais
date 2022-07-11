@@ -5,19 +5,24 @@
   &__container {
     @include grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto;
+    grid-template-rows: auto 1fr auto;
+
+    @media (min-width: rem(768)){
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     h1 {
       @include font(2rem, $font-semi-bold);
     }
 
     .one {
-      //TODO: Colocar o tamanho da imagem responsivo
-      width: rem(250);
-      height: rem(250);
-      background-color: rgb(202, 202, 202);
-      justify-self: center;
-      border-radius: 20px 0 20px 20px;
+
+      @media (min-width: rem(768)) {
+        grid-column: 2;
+        grid-row: 1 / span 3;
+        align-self: center;
+        max-width: rem(450);
+      }
     }
 
     .two {

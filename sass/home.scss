@@ -7,106 +7,104 @@
 .home {
   position: relative;
   overflow: hidden;
-  padding-left: $mb-1-5;
-  margin-top: $header-height;
+  // padding-left: $mb-1-5;
+  // margin-top: $header-height;
   flex-direction: column;
-  // border: $border;
 
-  @media (min-width: rem(768)){
+  @media (min-width: rem(768)) {
     flex-direction: row;
   }
 
-  .blob3 {
-    z-index: -1;
-    position: absolute;
-    width: rem(700);
-    top: -150px;
-    left: -70px;
-    // border: $border;
+  @media (min-width: rem(1024)) {
+    overflow: visible;
   }
 
-  .redes {
-    position: absolute;
-    left: 0;
-    top: 0;
-    @include flex;
-    flex-direction: column;
-    width: 30px;
-    height: 100%;
-    row-gap: $mb-2;
-    padding-left: 10px;
-    // border: $border;
+  // .redes {
+  //   position: absolute;
+  //   left: rem(-20);
+  //   top: 0;
+  //   @include flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   width: 30px;
+  //   height: 100%;
+  //   row-gap: $mb-2;
 
-    .line {
-      background-color: $black-color;
-      height: rem(200);
-      width: 2px;
-      border-radius: 30px;
-    }
+  //   @media (min-width: rem(768)){
+  //     left: rem(-30);
+  //   }
 
-    .social {
-      @include flex;
-      flex-direction: column;
-      row-gap: $mb-2;
-      width: rem(30);
+  //   .line {
+  //     background-color: $black-color;
+  //     height: rem(150);
+  //     width: 2px;
+  //     border-radius: 30px;
+  //   }
 
-      a {
-        img {
-          // width: 10px;
-          // height: 10px
-        }
-      }
-    }
-  }
+  //   .social {
+  //     @include flex;
+  //     flex-direction: column;
+  //     row-gap: $mb-2;
+  //     width: rem(30);
+
+  //     a {
+  //       img {
+  //       }
+  //     }
+  //   }
+  // }
 
   &__container {
-    @include grid($mb-1);
+    //! Mudar para display: flex
+    @include grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
-    // border: $border;
+    position: relative;
+
+    @media (min-width: rem(768)) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+
+    .blob3 {
+      z-index: -1;
+      position: absolute;
+      width: rem(400);
+      top: 0;
+      right: rem(-50);
+
+      @media (min-width: rem(768)) {
+        width: rem(450);
+        right: rem(-100);
+      }
+
+      @media (min-width: rem(1024)) {
+        width: rem(650);
+        top: rem(-100);
+        right: rem(-50);
+      }
+    }
 
     .one {
-      @include grid(0);
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-
-      .img1,
-      .img2 {
-        // width: clamp(rem(200), 55vw, rem(400));
-        //TODO: Tirar a altura quando receber as imagens
-        // height: rem(300);
-        // background-color: rgb(236, 236, 236);
-        // border: 1px solid $black-color;
-      }
-
-      .img1 {
-        // border-radius: 20px 0 20px 20px;
-        grid-column: 1 / span 2;
+      @media (min-width: rem(768)) {
+        grid-column: 2;
         grid-row: 1 / span 2;
         justify-self: center;
-        // align-self: center;
-        // margin: 0 0 0 $mb-4;
-        // border: $border;
-
-        img{
-          height: 100%;
-        }
-      }
-
-      .img2 {
-        border-radius: 0 20px 20px 20px;
-        grid-column: 1 / span 2;
-        grid-row: 1 / span 2;
-        justify-self: center;
-        // align-self: center;
-        margin: 10rem $mb-4 0 0;
+        order: 2;
+        width: rem(400);
       }
     }
 
     .two {
-      @include grid($mb-1-5);
+      @include grid($mb-1);
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto auto 1fr;
+      grid-template-rows: 1fr 1fr auto;
+      align-items: center;
+
+      @media (min-width: rem(768)) {
+        order: 1;
+        // grid-template-rows: auto auto auto;
+      }
 
       h1 {
         @include font($h1-font-size, $font-semi-bold);
@@ -127,6 +125,10 @@
         padding: $mb-0-75 $mb-2-5;
         border-radius: 0 20px 0 20px;
 
+        @media (min-width: rem(768)) {
+          justify-self: flex-start;
+        }
+
         &:hover {
           background-color: $red-color;
         }
@@ -139,52 +141,81 @@
   background-color: $yellowLight-color;
   width: 100%;
   margin-top: $mb-4-5;
+  padding: $mb-4-5 0;
   @include grid;
-  position: relative;
 
-  //! Consertar posição das setas e deixa-las responsivas
-  .curly1,
-  .curly2,
-  .curly3 {
-    //TODO: Colocar o tamnaho das setas responsivo
-    width: 100px;
-    height: 100px;
-    position: absolute;
-  }
-
-  .curly1 {
-    top: rem(240);
-    right: rem(25);
-  }
-
-  .curly2 {
-    top: rem(420);
-    left: rem(30);
-  }
-
-  .curly3 {
-    top: rem(600);
-    right: rem(20);
-    transform: rotate(7deg);
-  }
-
-  .curly1,
-  .curly3 {
-    width: 110px;
-    height: 110px;
-  }
-
-  .crown {
-    width: 40px;
-    height: 40px;
-    bottom: 0;
-    left: rem(165);
+  h1 {
+    text-align: center;
   }
 
   .boxes {
     @include grid($mb-1);
     grid-template-columns: 1fr;
     justify-items: center;
+    position: relative;
+
+    @media (min-width: rem(768)) {
+      grid-template-columns: 1fr 1fr 1fr 1fr auto;
+      align-items: center;
+    }
+
+    .curly1,
+    .curly2,
+    .curly3 {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+    }
+
+    .curly1 {
+      top: rem(100);
+      right: rem(-80);
+
+      @media (min-width: rem(768)) {
+        top: rem(-75);
+        right: 0;
+        left: rem(130);
+        transform: rotate(-100deg);
+      }
+    }
+
+    .curly2 {
+      top: rem(250);
+      left: rem(-80);
+
+      @media (min-width: rem(768)) {
+        top: rem(130);
+        right: 0;
+        left: rem(300);
+        transform: rotate(-90deg);
+      }
+    }
+
+    .curly3 {
+      top: rem(450);
+      right: rem(-80);
+      transform: rotate(7deg);
+
+      @media (min-width: rem(768)) {
+        top: rem(-80);
+        right: 0;
+        left: rem(480);
+        transform: rotate(-90deg);
+      }
+    }
+
+    .curly1,
+    .curly3 {
+      width: 110px;
+      height: 110px;
+    }
+
+    .crown {
+      width: 40px;
+      height: 40px;
+      bottom: 0;
+      left: rem(165);
+    }
 
     .box {
       //TODO: Mudar tamanho para ficar responsivo
