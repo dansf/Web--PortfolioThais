@@ -104,3 +104,8 @@ a {
   background-color: rgb(190, 190, 190) !important;
   @include transition;
 }
+
+.active{
+  background-color: red !important;
+  @include transition;
+}

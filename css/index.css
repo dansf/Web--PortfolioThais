@@ -100,6 +100,11 @@ a {
   transition: ease-in-out 0.3s;
 }
 
+.active {
+  background-color: red !important;
+  transition: ease-in-out 0.3s;
+}
+
 .header {
   position: fixed;
   top: 0;
