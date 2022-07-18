@@ -1,0 +1,26 @@
+@use "import" as *;
+@use "navbar" as *;
+// @use "footer" as *;
+
+//*================= NavBar ====================*//
+.header {
+  .nav {
+    &__item {
+      &:nth-child(2) {
+        background-color: $redDark-color;
+        border-radius: 30px;
+        padding: 0 $mb-0-5;
+
+        a {
+          color: $white-color;
+        }
+      }
+    }
+
+    &__link {
+      &:hover::before {
+        transform: scaleX(0);
+      }
+    }
+  }
+}
