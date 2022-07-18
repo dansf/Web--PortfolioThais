@@ -152,7 +152,7 @@ a {
     height: 100vh;
     z-index: 100;
     background-color: #fff;
-    box-shadow: -1px 0px 5px 0px rgba(255, 217, 192, 0.6980392157);
+    box-shadow: -1px 0px 5px 0px rgb(182, 182, 182);
     transition: ease-in-out 0.3s;
   }
 }
@@ -523,7 +523,7 @@ a {
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
 }
-.psicopedagogia__container .three button {
+.psicopedagogia__container .three .button {
   grid-column: 1/span 2;
   justify-self: flex-end;
   align-self: flex-start;
@@ -531,7 +531,7 @@ a {
   padding: 0.75rem 2.5rem;
 }
 @media (min-width: 48rem) {
-  .psicopedagogia__container .three button {
+  .psicopedagogia__container .three .button {
     border-radius: 20px 0 20px 20px;
   }
 }
@@ -580,7 +580,7 @@ a {
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
 }
-.psicoeducacao__container .three button {
+.psicoeducacao__container .three .button {
   grid-column: 1/span 2;
   justify-self: flex-end;
   align-self: flex-start;
@@ -588,7 +588,7 @@ a {
   padding: 0.75rem 2.5rem;
 }
 @media (min-width: 48rem) {
-  .psicoeducacao__container .three button {
+  .psicoeducacao__container .three .button {
     justify-self: flex-start;
     border-radius: 0 20px 20px 20px;
   }
@@ -772,13 +772,7 @@ a {
   font-weight: 500;
 }
 
-.home,
-.three__home,
-.psicanalise,
-.psicoeducacao,
-.psicopedagogia,
-.about,
-.contato {
+.section {
   opacity: 0;
 }
 
