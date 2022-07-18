@@ -1,55 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Func 0");
+const sectionOne = document.querySelector(".home");
+const sections = document.querySelectorAll(".section")
 
-  const sections = document.querySelectorAll(".spy");
-  const links = document.querySelectorAll(".nav__link");
+const options = {
+  root: null,
+  threshold: 0.5,
+};
 
-  window.addEventListener("scroll", () => {
-    console.log("Func 1")
-    let sectionMargin = 10;
-    const current =
-      sections.length -
-      [...sections]
-        .reverse()
-        .findIndex(
-          section => window.scrollY >= section.offsetTop - sectionMargin
-        ) -
-      1;
-
-    const makeActive = link => links[link].classList.add("active");
-    const removeActive = link => links[link].classList.remove("active");
-
-    const removeAllActive = () =>
-      [...Array(sections.length).keys()].forEach(link => removeActive(link));
+const callbackObserver = (entries, observer) => {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) return;
+    entry.target.classList.add("section-active")
+    console.log(entry.target);
+    // entry.unobserve(entry.target);
   });
+};
 
-  // const scrollspy = (() => {
-  //   let targets = document.querySelectorAll(".spy");
-  //   let options = {
-  //     threshold: 0.5,
-  //   };
+const observer = new IntersectionObserver(callbackObserver, options);
 
-  //   if (IntersectionObserver in window) {
-  //     (() => {
-  //       let inView = target => {
-  //         console.log("Func 1");
-  //         let interSecObs = new IntersectionObserver(entries => {
-  //           console.log("Func 2");
-  //           entries.forEach(entry => {
-  //             console.log("Func 3");
-  //             let elem = entry.target;
-  //             let currentNav = document.querySelector(
-  //               `.nav__ul .nav__item a[href='#${elem.id}']`
-  //             );
-  //             entry.isIntersecting
-  //               ? currentNav.classList.add("active")
-  //               : currentNav.classList.remove("active");
-  //           });
-  //         }, options);
-  //         interSecObs.observe(target);
-  //       };
-  //       targets.forEach(inView);
-  //     })();
-  //   }
-  // })();
-});
+sections.forEach(section => {
+  observer.observe(section);
+})
+

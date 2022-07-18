@@ -1,5 +1,7 @@
 const one = document.querySelector(".toggleOne");
 const two = document.querySelector(".toggleTwo");
+const oneArrow = document.querySelector(".leftArrow");
+const twoArrow = document.querySelector(".rightArrow");
 
 const removeColor = () => {
   one.classList.remove("colorOrange");
@@ -45,6 +47,18 @@ one.addEventListener("click", () => {
 })
 
 two.addEventListener("click", () => {
+  removeColor();
+  addColorTwo();
+  addTextTwo();
+})
+
+oneArrow.addEventListener("click", () => {
+  removeColor();
+  addColorOne();
+  addTextOne()
+})
+
+twoArrow.addEventListener("click", () => {
   removeColor();
   addColorTwo();
   addTextTwo();

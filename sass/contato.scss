@@ -12,8 +12,6 @@
     }
 
     .one {
-
-      
       h1 {
         @include font($h1-font-size, $font-semi-bold);
         padding: $mb-1 0;
@@ -26,21 +24,38 @@
 
     .two {
       .redes {
-        //TODO: Colocar o tamanho responsivo
-        @include grid($mb-1);
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto 1fr;
+        @include flex(center, flex-start);
+        gap: $mb-0-5;
         width: 100%;
-        // border: $border;
 
         a {
           @include grid($mb-0-5);
           grid-template-columns: auto 1fr;
           align-items: center;
+          text-decoration: underline;
 
           img {
             width: rem(40);
           }
+        }
+
+        .wpp-arrow{
+          position: relative;
+          animation-duration: 1s;
+          animation-name: infinityArrow;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          animation-timing-function: ease-in-out;
+        }
+
+        @keyframes infinityArrow {
+         from{
+          left: 20px;
+         }
+
+         to{
+          left: 0;
+         }
         }
       }
     }

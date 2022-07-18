@@ -7,8 +7,6 @@
 .home {
   position: relative;
   overflow: hidden;
-  // padding-left: $mb-1-5;
-  // margin-top: $header-height;
   flex-direction: column;
 
   @media (min-width: rem(768)) {
@@ -18,41 +16,6 @@
   @media (min-width: rem(1024)) {
     overflow: visible;
   }
-
-  // .redes {
-  //   position: absolute;
-  //   left: rem(-20);
-  //   top: 0;
-  //   @include flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   width: 30px;
-  //   height: 100%;
-  //   row-gap: $mb-2;
-
-  //   @media (min-width: rem(768)){
-  //     left: rem(-30);
-  //   }
-
-  //   .line {
-  //     background-color: $black-color;
-  //     height: rem(150);
-  //     width: 2px;
-  //     border-radius: 30px;
-  //   }
-
-  //   .social {
-  //     @include flex;
-  //     flex-direction: column;
-  //     row-gap: $mb-2;
-  //     width: rem(30);
-
-  //     a {
-  //       img {
-  //       }
-  //     }
-  //   }
-  // }
 
   &__container {
     //! Mudar para display: flex
@@ -79,9 +42,9 @@
       }
 
       @media (min-width: rem(1024)) {
-        width: rem(650);
-        top: rem(-100);
-        right: rem(-50);
+        width: rem(550);
+        top: rem(-10);
+        right: rem(-25);
       }
     }
 
@@ -143,6 +106,7 @@
   margin-top: $mb-4-5;
   padding: $mb-4-5 0;
   @include grid;
+  
 
   h1 {
     text-align: center;

@@ -6,14 +6,15 @@
     position: relative;
     @include grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto auto;
 
-    @media (min-width: rem(768)){
+    @media (min-width: rem(768)) {
       grid-template-columns: repeat(2, 1fr);
     }
 
     h1 {
       @include font(2rem, $font-semi-bold);
+      align-self: flex-end;
     }
 
     .one {
@@ -27,6 +28,9 @@
         max-width: rem(450);
       }
 
+      @media (min-width: rem(1024)) {
+        width: rem(450);
+      }
     }
 
     .two {
@@ -49,7 +53,7 @@
         border-radius: 20px 0 20px 20px;
         padding: $mb-0-75 $mb-2-5;
 
-        @media (min-width: rem(768)){
+        @media (min-width: rem(768)) {
           border-radius: 20px 0 20px 20px;
         }
       }

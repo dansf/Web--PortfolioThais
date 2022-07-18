@@ -95,17 +95,26 @@ a {
   @include transition;
 }
 
-.colorOrange{
+.colorOrange {
   background-color: #ffd9c0 !important;
   @include transition;
 }
 
-.colorGray{
+.colorGray {
   background-color: rgb(190, 190, 190) !important;
   @include transition;
 }
 
-.active{
+.active {
   background-color: red !important;
   @include transition;
+}
+
+.section-active {
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  opacity: 1 !important;
+  transition: all 1s $ease-io;
 }

@@ -7,7 +7,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
 
-    @media (min-width: rem(768)){
+    @media (min-width: rem(768)) {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -16,7 +16,6 @@
     }
 
     .one {
-
       @media (min-width: rem(768)) {
         grid-column: 2;
         grid-row: 1 / span 3;
@@ -26,6 +25,8 @@
     }
 
     .two {
+      height: rem(300);
+
       h1 {
         @include font($h1-font-size, $font-semi-bold);
         padding: $mb-1 0;
@@ -39,23 +40,30 @@
     }
 
     .three {
-      @include grid($mb-1);
-      grid-template-columns: repeat(2, 1fr);
+      @include grid($mb-2);
+      grid-template-columns: repeat(3, auto);
       justify-self: center;
       justify-content: center;
 
-      .toggleOne,
-      .toggleTwo {
-        background-color: rgb(190, 190, 190);
-        border-radius: 50%;
-        height: rem(10);
-        width: rem(10);
-        cursor: pointer;
+      .toggles {
+        @include flex;
+        column-gap: $mb-1;
+
+        .toggleOne,
+        .toggleTwo {
+          background-color: rgb(190, 190, 190);
+          border-radius: 50%;
+          height: rem(10);
+          width: rem(10);
+          cursor: pointer;
+        }
+
+        .toggleOne {
+          background-color: #ffd9c0;
+        }
       }
 
-      .toggleOne {
-        background-color: #ffd9c0;
-      }
+     
     }
   }
 }
