@@ -266,121 +266,118 @@ a {
   font-weight: 500;
 }
 
-.header .nav__item:nth-child(2) {
+.header .nav__item:nth-child(4) {
   background-color: #ec9292;
   border-radius: 30px;
   padding: 0 0.5rem;
 }
-.header .nav__item:nth-child(2) a {
+.header .nav__item:nth-child(4) a {
   color: #fff;
 }
 .header .nav__link:hover::before {
   transform: scaleX(0);
 }
 
-.main__psicanalise .pagePsicanalise__container h1 {
+.main__psicoeducacao .pagePsicoeducacao__container h1 {
   font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
-.main__psicanalise .pagePsicanalise__container .one {
+.main__psicoeducacao .pagePsicoeducacao__container .one {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto auto;
   margin-bottom: 2rem;
 }
-.main__psicanalise .pagePsicanalise__container .one .imgs {
-  grid-column: 1/span 2;
-  grid-row: 1;
-  justify-self: center;
-}
-@media (min-width: 48rem) {
-  .main__psicanalise .pagePsicanalise__container .one .imgs {
-    grid-column: 2;
-  }
-}
-.main__psicanalise .pagePsicanalise__container .one .imgs img {
+.main__psicoeducacao .pagePsicoeducacao__container .one img {
   width: 18.75rem;
 }
 @media (min-width: 48rem) {
-  .main__psicanalise .pagePsicanalise__container .one .imgs img {
-    width: 23.125rem;
+  .main__psicoeducacao .pagePsicoeducacao__container .one img {
+    width: 21.875rem;
   }
 }
 @media (min-width: 64rem) {
-  .main__psicanalise .pagePsicanalise__container .one .imgs img {
+  .main__psicoeducacao .pagePsicoeducacao__container .one img {
     width: 28.125rem;
   }
 }
-.main__psicanalise .pagePsicanalise__container .one .imgs img:nth-child(1),
-.main__psicanalise .pagePsicanalise__container .one .imgs img:nth-child(2) {
+.main__psicoeducacao .pagePsicoeducacao__container .one img:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.main__psicoeducacao .pagePsicoeducacao__container .one img:nth-child(1) {
+  grid-column: 1;
+  grid-row: 2;
+}
+.main__psicoeducacao .pagePsicoeducacao__container .one img:nth-child(2) {
   display: none;
 }
-.main__psicanalise .pagePsicanalise__container .one p {
+.main__psicoeducacao .pagePsicoeducacao__container .one p {
   font-family: "Poppins", sans-serif;
   font-size: 0.938rem;
   font-weight: 600;
 }
-.main__psicanalise .pagePsicanalise__container .one .pOne {
+.main__psicoeducacao .pagePsicoeducacao__container .one .pOne {
   grid-column: 1/span 2;
-  grid-row: 2;
+  grid-row: 1;
 }
 @media (min-width: 48rem) {
-  .main__psicanalise .pagePsicanalise__container .one .pOne {
+  .main__psicoeducacao .pagePsicoeducacao__container .one .pOne {
     grid-column: 1;
     grid-row: 1;
   }
 }
 @media (min-width: 48rem) {
-  .main__psicanalise .pagePsicanalise__container .one .pOne {
+  .main__psicoeducacao .pagePsicoeducacao__container .one .pOne {
     align-self: center;
   }
 }
-.main__psicanalise .pagePsicanalise__container .one .pTwo {
+.main__psicoeducacao .pagePsicoeducacao__container .one .pTwo {
   grid-column: 1/span 3;
 }
-.main__psicanalise .pagePsicanalise__container .two {
+.main__psicoeducacao .pagePsicoeducacao__container .two {
   display: grid;
   gap: 1rem;
 }
 @media (min-width: 48rem) {
-  .main__psicanalise .pagePsicanalise__container .two {
+  .main__psicoeducacao .pagePsicoeducacao__container .two {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
 }
 @media (min-width: 64rem) {
-  .main__psicanalise .pagePsicanalise__container .two {
+  .main__psicoeducacao .pagePsicoeducacao__container .two {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.main__psicanalise .pagePsicanalise__container .two .box {
+.main__psicoeducacao .pagePsicoeducacao__container .two .box {
   border: 1px solid red;
   height: 18.75rem;
   width: 100%;
 }
 @media (min-width: 48rem) {
-  .main__psicanalise .pagePsicanalise__container .two .box:nth-child(1) {
+  .main__psicoeducacao .pagePsicoeducacao__container .two .box:nth-child(1) {
     grid-column: 1/span 2;
   }
-  .main__psicanalise .pagePsicanalise__container .two .box:nth-child(4) {
+  .main__psicoeducacao .pagePsicoeducacao__container .two .box:nth-child(4) {
     grid-column: 1/span 2;
   }
-  .main__psicanalise .pagePsicanalise__container .two .box:nth-child(7) {
+  .main__psicoeducacao .pagePsicoeducacao__container .two .box:nth-child(7) {
     grid-column: 1/span 2;
   }
 }
 @media (min-width: 64rem) {
-  .main__psicanalise .pagePsicanalise__container .two .box:nth-child(1) {
+  .main__psicoeducacao .pagePsicoeducacao__container .two .box:nth-child(1) {
     grid-column: 1/span 2;
   }
-  .main__psicanalise .pagePsicanalise__container .two .box:nth-child(4) {
+  .main__psicoeducacao .pagePsicoeducacao__container .two .box:nth-child(4) {
     grid-column: 2/span 2;
   }
-  .main__psicanalise .pagePsicanalise__container .two .box:nth-child(5) {
+  .main__psicoeducacao .pagePsicoeducacao__container .two .box:nth-child(5) {
     grid-column: 1/span 2;
   }
 }
 
-/*# sourceMappingURL=pagepsicanalise.css.map */
+/*# sourceMappingURL=pagepsicoeducacao.css.map */
