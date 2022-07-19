@@ -4,8 +4,8 @@ const navLinks = document.querySelectorAll(".nav__link");
 
 const options = {
   root: null,
-  threshold: 0.8,
-  rootMargin: "0px 0px 0px"
+  threshold: 0.6,
+  // rootMargin: "0px 0px 0px"
 };
 
 const sectionsNames = [
