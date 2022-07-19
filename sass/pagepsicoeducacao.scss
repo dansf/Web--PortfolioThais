@@ -35,37 +35,43 @@
       .one {
         @include grid($mb-1);
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto;
         margin-bottom: $mb-2;
 
-        
+        img {
+          width: rem(300);
 
-          img {
-            width: rem(300);
-
-            @media (min-width: rem(768)) {
-              width: rem(350);
-            }
-
-            @media (min-width: rem(1024)) {
-              width: rem(450);
-            }
+          @media (min-width: rem(768)) {
+            width: rem(350);
           }
 
-          img:nth-child(3) {
-            grid-column: 2;
-            grid-row: 1;
+          @media (min-width: rem(1024)) {
+            width: rem(450);
           }
+        }
 
-          img:nth-child(1) {
+        img:nth-child(1) {
+          grid-column: 1;
+          grid-row: 3;
+
+          @media (min-width: rem(768)){
             grid-column: 1;
             grid-row: 2;
           }
+        }
 
-          img:nth-child(2) {
-            display: none;
+        img:nth-child(3) {
+          grid-column: 1;
+          grid-row: 1;
+
+          @media (min-width: rem(768)){
+            grid-column: 2;
           }
-        
+        }
+
+        img:nth-child(2) {
+          display: none;
+        }
 
         p {
           @include font($normal-font-size, $font-semi-bold);
@@ -73,7 +79,7 @@
 
         .pOne {
           grid-column: 1 / span 2;
-          grid-row: 1;
+          grid-row: 2;
 
           @media (min-width: rem(768)) {
             grid-column: 1;
@@ -87,6 +93,10 @@
 
         .pTwo {
           grid-column: 1 / span 3;
+
+          @media (min-width: rem(768)){
+            grid-column: 2;
+          }
         }
       }
 

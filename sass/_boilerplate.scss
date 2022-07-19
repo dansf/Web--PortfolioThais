@@ -118,3 +118,7 @@ a {
   opacity: 1 !important;
   transition: all 1s $ease-io;
 }
+
+.spyActive::before {
+  transform: scaleX(1) !important;
+}

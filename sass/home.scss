@@ -107,9 +107,13 @@
   padding: $mb-4-5 0;
   @include grid;
 
-
   h1 {
-    text-align: center;
+    justify-self: center;
+    position: relative;
+
+    @media (min-width: rem(768)) {
+      left: -30px;
+    }
   }
 
   .boxes {
@@ -175,10 +179,7 @@
     }
 
     .crown {
-      width: 40px;
-      height: 40px;
-      bottom: 0;
-      left: rem(165);
+      height: rem(40);
     }
 
     .box {
